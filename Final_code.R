@@ -9,17 +9,13 @@ library(viridis)
 sass <- rast("~/Downloads/sass.jpg")
 
 #crop 
-ext <- c(50,100,100,150)
+ext <- c(50,250,100,300)
 sassc <- crop(sass, ext)
 
 # theoretical data
 # td <- matrix(runif(100), nrow = 10)
 # plot(rast(td))
      
-# Shannon
-sha <- ShannonP(sassc, window=1, np=1)
-plot(sha)
-
 # Shannon
 shannon <- Shannon(x=sassc,window=3)
 
