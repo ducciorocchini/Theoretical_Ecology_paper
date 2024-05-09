@@ -6,7 +6,8 @@ library(rasterdiv)
 library(viridis)
 
 # loading data
-sass <- rast("~/Downloads/sass.jpg")
+sass <- rast("~/Documents/rao_devst/sass.jpg")
+sent60 <- rast("~/Documents/rao_devst/sentinel-2_60m.tif")
 
 #crop 
 ext <- c(50,250,100,300)
