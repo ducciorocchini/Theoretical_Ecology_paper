@@ -62,16 +62,48 @@ plot(stack9, col=rocket(100))
 ##########----- moving window: 9x9
 
 # final color chosen: viridis
+pdf("~/Downloads/raost/stack3.pdf")
 plot(stack3, col=viridis(100))
+dev.off()
+
+pdf("~/Downloads/raost/stack5.pdf")
 plot(stack5, col=viridis(100))
+dev.off()
+
+pdf("~/Downloads/raost/stack7.pdf")
 plot(stack7, col=viridis(100))
+dev.off()
+
+pdf("~/Downloads/raost/stack9.pdf")
 plot(stack9, col=viridis(100))
+dev.off()
 
+stackf <- c(ndvi[[1]], shan3, raoq3, 
+            ndvi[[1]], shan5, raoq5, 
+            ndvi[[1]], shan7, raoq7, 
+            ndvi[[1]], shan9, raoq9)
+pdf("~/Downloads/raost/stackf.pdf")
+plot(stackf, col=viridis(100))
+dev.off()
 
-
-
-
-
+pdf("~/Downloads/raost/final.pdf")
+par(mfrow=c(4,3))
+plot(ndvi[[1]], col=viridis(100), main="NDVI")
+plot(shan3, col=viridis(100), main="Shannon's H 3x3")
+plot(raoq3, col=viridis(100), main="Rao's Q 3x3")
+plot(ndvi[[1]], col=viridis(100), main="NDVI")
+plot(shan5, col=viridis(100), main="Shannon's H 5x5")
+plot(raoq5, col=viridis(100), main="Rao's Q 5x5")
+plot(ndvi[[1]], col=viridis(100), main="NDVI")
+plot(shan7, col=viridis(100), main="Shannon's H 7x7")
+plot(raoq7, col=viridis(100), main="Rao's Q 7x7")
+plot(ndvi[[1]], col=viridis(100), main="NDVI")
+plot(shan9, col=viridis(100), main="Shannon's H 9x9")
+plot(raoq9, col=viridis(100), main="Rao's Q 9x9")
+dev.off()       
+               
+              
+             
 
 
 
