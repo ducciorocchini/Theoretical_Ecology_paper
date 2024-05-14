@@ -61,6 +61,11 @@ plot(stack9, col=mako(100))
 plot(stack9, col=rocket(100))
 ##########----- moving window: 9x9
 
+# final color chosen: viridis
+plot(stack3, col=viridis(100))
+plot(stack5, col=viridis(100))
+plot(stack7, col=viridis(100))
+plot(stack9, col=viridis(100))
 
 
 
