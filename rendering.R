@@ -3,7 +3,7 @@
 library(terra)
 
 # input data
-ndvi <- rast("~/Downloads/rgb,tiff")
+ndvi <- rast("~/Downloads/raost/ndvi.tiff")
 
 ##########----- moving window: 3x3
 shan3 <- rast("~/Downloads/raost/shannon_mw3.tiff")
@@ -88,9 +88,9 @@ dev.off()
 
 pdf("~/Downloads/raost/final.pdf")
 par(mfrow=c(4,3))
-plot(ndvi[[1]], col=viridis(100), main="NDVI")
-plot(shan3, col=viridis(100), main="Shannon's H 3x3")
-plot(raoq3, col=viridis(100), main="Rao's Q 3x3")
+# plot(ndvi[[1]], col=viridis(100), main="NDVI")
+# plot(shan3, col=viridis(100), main="Shannon's H 3x3")
+# plot(raoq3, col=viridis(100), main="Rao's Q 3x3")
 plot(ndvi[[1]], col=viridis(100), main="NDVI")
 plot(shan5, col=viridis(100), main="Shannon's H 5x5")
 plot(raoq5, col=viridis(100), main="Rao's Q 5x5")
@@ -101,7 +101,29 @@ plot(ndvi[[1]], col=viridis(100), main="NDVI")
 plot(shan9, col=viridis(100), main="Shannon's H 9x9")
 plot(raoq9, col=viridis(100), main="Rao's Q 9x9")
 dev.off()       
+
+#### also inferno is a good palette
+
+pdf("~/Downloads/raost/final_inferno.pdf")
+par(mfrow=c(4,3))
+# plot(ndvi[[1]], col=inferno(100), main="NDVI")
+# plot(shan3, col=inferno(100), main="Shannon's H 3x3")
+# plot(raoq3, col=inferno(100), main="Rao's Q 3x3")
+plot(ndvi[[1]], col=inferno(100), main="NDVI")
+plot(shan5, col=inferno(100), main="Shannon's H 5x5")
+plot(raoq5, col=inferno(100), main="Rao's Q 5x5")
+plot(ndvi[[1]], col=inferno(100), main="NDVI")
+plot(shan7, col=inferno(100), main="Shannon's H 7x7")
+plot(raoq7, col=inferno(100), main="Rao's Q 7x7")
+plot(ndvi[[1]], col=inferno(100), main="NDVI")
+plot(shan9, col=inferno(100), main="Shannon's H 9x9")
+plot(raoq9, col=inferno(100), main="Rao's Q 9x9")
+dev.off()       
                
+              
+             
+
+
               
              
 
