@@ -34,7 +34,7 @@ shannon <- Shannon(x=sent, window=3)
 
 # Rao
 res <- paRao(x=sent, window=3, alpha=3, method = "classic")
-plot(res[[1]][[1]], col=viridis(100))
+plot(res[[1]][[1]], col=viridis(100)) # thanks to my students Irene and Pietro
 
 # stack
 stack <- c(shannon[[1]][[1]],res[[1]][[1]])
