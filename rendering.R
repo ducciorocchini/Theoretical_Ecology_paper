@@ -1,6 +1,7 @@
 # Final rendering of Figure 1
 
 library(terra)
+library(viridis)
 
 # input data
 ndvi <- rast("~/Downloads/raost/ndvi.tiff")
